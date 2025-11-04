@@ -46,3 +46,30 @@ last_name = "mercury"
 full_name = first_name + " " + last_name
 print(full_name)
 print(full_name.title())
+
+
+#f-strings
+famous_person = "taylor swift"
+message = f"{famous_person} una vez dijo voy al oxxo en avion"
+print(message)
+
+print(f"{famous_person.upper()} una vez dijo voy al oxxo en avion")
+
+# Actividad
+"""
+    Elige el nombre de una persona famosa (quien tu quieras).
+    Elige una cita famosa de esta persona 
+    iguala ambos strings a una variable.
+
+    1) Realiza la concatenacion utilizando el signo de una suma 
+    2) Realiza la concatenacion utilizando strings 
+"""
+
+famous_person = "maluma"
+quota = "vamo a se feli felice lo 4."
+famous_message = famous_person+" "+quota 
+print(famous_person+" "+quota)
+print(famous_message)
+
+f_string_message = f"{famous_person} {quota}"
+print(f_string_message)
