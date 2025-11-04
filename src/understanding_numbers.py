@@ -33,14 +33,14 @@ print("modulo", modulo)
 """
     Floats
         python llama floatsa cualquier numero con un punto decimal.
-        Los podemos sumar (+), restar )- 
+        Los podemos sumar (+), restar (-)
         Multiplicar (*) y dividir (/)
         Les podemos aplicar potencias(**2,**3,...),
 """
 
 print(0.1+0.1)
-print(o.2-0.2)
-print(o.1*2)
+print(0.2-0.2)
+print(0.1*2)
 print(2*0.2)
 
 # Imprimir la edad de alguien
