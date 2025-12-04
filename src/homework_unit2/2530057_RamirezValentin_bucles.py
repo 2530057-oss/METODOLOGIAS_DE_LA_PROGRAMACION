@@ -391,3 +391,4 @@ for i in range(n, 0, -1):
 
 
 # REPOSITORIO DE GITHUB
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_RamirezValentin_bucles.py
