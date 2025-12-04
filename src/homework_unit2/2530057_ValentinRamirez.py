@@ -382,8 +382,7 @@ print("Overweight:", str(bmi >= 25.0).lower())
 # Validar rangos y evitar divisiones entre cero es esencial para mantener cálculos seguros y evitar fallos inesperados.
 # Diseñar condiciones con and, or y not enseña a controlar situaciones lógicas más complejas de manera clara.
 # Estos mismos patrones se repiten en problemas de nómina, descuentos, préstamos y muchos otros escenarios cotidianos.
-
-# REFERENCIAS 
+ 
 # References:
 # 1) Python documentation – Built-in Types: Numeric Types (int, float) and Boolean Type (bool)
 # 2) Python Tutorial – Operadores aritméticos, relacionales y lógicos
