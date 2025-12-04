@@ -492,3 +492,4 @@ elif action_text == "DELETE":
 # 5) Apuntes de clase y recursos oficiales de programación básica sobre listas, tuplas y diccionarios
 
 # REPOSITORIO DE GITHUB
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_RamirezValentin.py
