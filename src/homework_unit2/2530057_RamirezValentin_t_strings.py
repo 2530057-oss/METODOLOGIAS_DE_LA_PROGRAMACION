@@ -393,3 +393,4 @@ else:
 # 5) Apuntes de Algoritmos y Programación Básica – Sección de cadenas y validación
 
 # REPOSITORIO DE GITHUB
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_RamirezValentin_t_strings.py
