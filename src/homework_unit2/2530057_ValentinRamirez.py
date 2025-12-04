@@ -390,3 +390,6 @@ print("Overweight:", str(bmi >= 25.0).lower())
 # 3) “Automate the Boring Stuff with Python” – Capítulos introductorios sobre tipos numéricos y control lógico
 # 4) Apuntes de Algoritmos y Programación Básica – Sección de tipos numéricos y validación
 # 5) Artículos sobre validación de datos numéricos y manejo de errores en cálculos
+
+# REPOSITORIO DE GITHUB
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_ValentinRamirez.py

@@ -1,8 +1,8 @@
-"""
-Alejandro Valentin Ramirez Gonzalez
-2530057
-1-3
-"""
+
+# Alejandro Valentin Ramirez Gonzalez
+# 2530057
+# 1-3
+
 # Resumen ejecutivo
 
 # Un string en Python es un tipo de dato de texto e inmutable, lo que significa que no puede modificarse una vez creado.
@@ -12,50 +12,41 @@ Alejandro Valentin Ramirez Gonzalez
 # El documento cubrirá la descripción de cada problema, los formatos de entrada y salida esperados y las validaciones necesarias.
 # También incluirá el uso de métodos de string, ejemplos prácticos, casos de prueba y el código usado en cada sección.
 
-# BUENAS PRÁCTICAS
-
-# - Los strings son inmutables: cada cambio crea una nueva cadena.
-# - Usar strip() y lower() para normalizar entrada antes de validar.
-# - Evitar números mágicos; documentar el significado de cada slice.
-# - Usar métodos nativos como replace(), split(), join().
-# - Primero validar que no esté vacío; luego el formato.
-# - Escribir variables con nombres claros y mensajes simples.
-
-
-
-
 # Problem 1: Full name formatter (name + initials)
-
-# Descripción:
-# Dado el nombre completo de una persona en una sola cadena (por ejemplo: "juan carlos tovar"), el programa debe:
-# 1) Normalizar el texto (strip, espacios extra, mayúsculas/minúsculas).
-# 2) Mostrar el nombre formateado en Title Case y las iniciales (por ejemplo: J.C.T.).
-
-# Entradas:
-# - full_name (string)
-
-# Salidas:
-# - "Formatted name: ..."
-# - "Initials: ..."
-
-# Validaciones:
-# - No vacío tras strip()
-# - Debe contener al menos 2 palabras
-
-# Casos de prueba:
-# Normal:
-# Entrada: Juan Perez Lopez
-# Salida: Formatted name: Juan Perez Lopez | Initials: J.P.L
-
-# Border:
-# Entrada: maRiA de la cruz
-# Salida: Formatted name: Maria De La Cruz | Initials: M.D.L.C
-
-# Error:
-# Entrada: (vacío)
-# Salida: Formatted name: | Initials: (no hay datos)
-
 """
+Description:
+Given a person s full name in a single string (for example: “juan carlos tovar”), the program must:
+
+1. Normalize the text (strip, remove extra spaces, fix upper/lowercase).
+2. Display the name in Title Case and show the initials (for example: J.C.T.).
+
+Inputs
+* full_name (string)
+
+Outputs:
+* “Formatted name: …”
+* “Initials: …”
+
+Validations:
+* The string must not be empty after strip().
+* It must contain at least two words.
+
+Test cases
+
+Normal:
+Input: Juan Perez Lopez
+Output: Formatted name: Juan Perez Lopez | Initials: J.P.L
+
+Border:
+Input: maRiA de la cruz
+Output: Formatted name: Maria De La Cruz | Initials: M.D.L.C
+
+Error:
+Input: (empty)
+Output: Formatted name:  | Initials: (no data)
+"""
+
+
 full_name = input(f"tell me your full name: ")
 
 normalized_name = " ".join(full_name.strip().lower().split())
@@ -67,47 +58,50 @@ parts = normalized_name.split()
 initials = ".".join([p[0].upper() for p in parts])
 print("Formatted name:", title_name)
 print("Initials:", initials)
-"""
+
 
 
 
 
 # Problem 2: Simple email validator (structure + domain)
-
-# Descripción:
-# Valida si una dirección de correo tiene un formato básico correcto:
-# - Contiene exactamente un '@'.
-# - Después del '@' debe haber al menos un '.'.
-# - No contiene espacios en blanco.
-# Si el correo es válido, también muestra el dominio (la parte después de '@').
-
-# Entradas:
-# - email_text (string)
-
-# Salidas:
-# - "Valid email: true/false"
-# - Si es válido: "Domain: ..."
-
-# Validaciones:
-# - No vacío
-# - Un solo '@'
-# - No espacios
-# - Al menos un '.' en el dominio
-
-# Casos de prueba:
-# Normal:
-# Entrada: user@example.com
-# Salida: Valid email. Domain: example.com
-
-# Border:
-# Entrada: user@mail.co
-# Salida: Valid email. Domain: mail.co
-
-# Error:
-# Entrada: user@@mail.com
-# Salida: Invalid email: must contain exactly one '@'.
-
 """
+Description:
+Validate whether an email address has a correct basic format:
+
+* It contains exactly one '@'.
+* After the '@' there must be at least one '.'.
+* It has no whitespace characters.
+  If the email is valid, also display the domain (everything after '@').
+
+Inputs:
+* email_text (string)
+
+Outputs:
+* “Valid email: true/false”
+* If valid: “Domain: …”
+
+Validations:
+* Not empty
+* Exactly one '@'
+* No spaces
+* At least one '.' in the domain
+
+Test cases
+
+Normal:
+Input: [user@example.com](mailto:user@example.com)
+Output: Valid email. Domain: example.com
+
+Border:
+Input: [user@mail.co](mailto:user@mail.co)
+Output: Valid email. Domain: mail.co
+
+Error:
+Input: user@@mail.com
+Output: Invalid email: must contain exactly one '@'.
+"""
+
+
 email = input("Enter an email address: ")
 
 if " " in email:
@@ -122,40 +116,39 @@ else:
     else:
         print("Valid email.")
         print("Domain:", domain)
-"""
 
 
 
 
 # Problem 3: Palindrome checker (ignoring spaces and case)
-
-# Descripcion:
-#Determina si una frase es un palíndromo, es decir, se lee igual de izquierda a derecha
-# y de derecha a izquierda, ignorando espacios y mayúsculas/minúsculas.
-
-# Entradas:
-# - phrase (string)
-
-# Salidas:
-# - "Is palindrome: true/false"
-
-# Validaciones:
-# - No vacío tras strip()
-# - Longitud mínima de 3 tras limpiar
-
-# Normal:
-# Entrada: ana
-# Salida: ana | true
-
-# Border:
-# Entrada: a n a
-# Salida: ana | true
-
-# Error:
-# Entrada: a
-# Salida: Error: too short
-
 """
+Description:
+Determine whether a phrase is a palindrome, meaning it reads the same forward and backward while ignoring spaces and letter case.
+
+Inputs:
+* phrase (string)
+
+Outputs:
+* “Is palindrome: true/false”
+
+Validations:
+* Not empty after strip()
+* Minimum length of 3 after cleaning
+
+Normal:
+Input: ana
+Output: ana | true
+
+Border:
+Input: a n a
+Output: ana | true
+
+Error:
+Input: a
+Output: Error: too short
+"""
+
+
 phrase = input("Enter a phrase: ")
 
 clean_input = phrase.strip()
@@ -173,50 +166,53 @@ else:
         print("Normalized phrase:", normalized)
         print("Is palindrome:", "true" if is_palindrome else "false")
 
-"""
+
 
 
 
 
 # Problem 4: Sentence word stats (lengths and first/last word)
-
-#Descripcion:
-# Dada una oración, el programa debe:
-# 1) Normalizar espacios (quitar espacios al principio y al final).
-# 2) Separar las palabras por espacios.
-# 3) Mostrar:
-#   - Número total de palabras.
-#   - Primera palabra.
-#   - Última palabra.
-#   - Palabra más corta y más larga (por longitud).
-
-# Entradas:
-# - sentence (string)
-
-# Salidas:
-# - Word count
-# - First word
-# - Last word
-# - Shortest word
-# - Longest word
-
-# Validaciones:
-# - No vacío
-# - Al menos una palabra válida
-
-# Normal:
-# Entrada: hola mundo desde python
-# Salida: 4 | hola | python | hola | python
-
-# Border:
-# Entrada: uno dos tres
-# Salida: 3 | uno | tres | uno | tres
-
-# Error:
-# Entrada: (vacío)
-# Salida: Error: sentence cannot be empty.
-
 """
+Description:
+Given a sentence, the program must:
+
+1. Normalize spaces (remove leading/trailing spaces).
+2. Split the sentence into words.
+3. Output:
+
+* Total word count
+* First word
+* Last word
+* Shortest word (by length)
+* Longest word (by length)
+
+Inputs:
+* sentence (string)
+
+Outputs:
+* Word count
+* First word
+* Last word
+* Shortest word
+* Longest word
+
+Validations:
+* Not empty
+* At least one valid word
+
+Normal:
+Input: hola mundo desde python
+Output: 4 | hola | python | hola | python
+
+Border:
+Input: uno dos tres
+Output: 3 | uno | tres | uno | tres
+
+Error:
+Input: (empty)
+Output: Error: sentence cannot be empty.
+"""
+
 sentence = input("Enter a sentence: ")
 
 clean = sentence.strip()
@@ -242,45 +238,46 @@ else:
         print("Last word:", last_word)
         print("Shortest word:", shortest)
         print("Longest word:", longest)
-"""
+
 
 
 
 
 
 # Problem 5: Password strength classifier
-
-# Descripción:
-# Clasifica una contraseña como "weak", "medium" o "strong" según reglas 
-# mínimas (puedes afinarlas, pero documéntalas en los comentarios).
-
-# Reglas usadas:
-# - weak: longitud < 8
-# - medium: longitud >= 8 y mezcla parcial
-# - strong: >= 8 y contiene mayúscula, minúscula, dígito y símbolo
-
-# Entradas:
-# - password_input (string)
-
-# Salidas:
-# - "Password strength: weak/medium/strong"
-
-# Validaciones:
-# - No vacía
-
-# Normal:
-# Entrada: Abc123!@
-# Salida: strong
-
-# Border:
-# Entrada: abcdefg1
-# Salida: medium
-
-# Error:
-# Entrada: (vacío)
-# Salida: weak
-
 """
+Description:
+Classify a password as **weak**, **medium**, or **strong** according to minimal rules.
+
+Rules:
+
+* **weak**: length < 8
+* **medium**: length ≥ 8 and partial mix
+* **strong**: length ≥ 8 and contains uppercase, lowercase, digit, and symbol
+
+Inputs:
+* password_input (string)
+
+Outputs:
+* Password strength: weak/medium/strong
+
+Validations:
+* Not empty
+
+Normal:
+Input: Abc123!@
+Output: strong
+
+Border:
+Input: abcdefg1
+Output: medium
+
+Error:
+Input: (empty)
+Output: weak
+"""
+
+
 password_input = input("Enter a password: ")
 
 if not password_input:
@@ -313,43 +310,46 @@ else:
         print("Password strength: medium")
     else:
         print("Password strength: weak")
-"""
+
 
 
 # Problem 6: Product label formatter (fixed-width text)
-
-# Descripción:
-# Genera una etiqueta de 30 caracteres:
-# "Product: <NAME> | Price: $<PRICE>"
-
-# Si es más corta, rellena con espacios.
-# Si es más larga, recorta.
-
-# Entradas:
-# - product_name (string)
-# - price_value (num/string)
-
-# Salidas:
-# - "Label: '<30 chars>'"
-
-# Validaciones:
-# - Nombre no vacío
-# - Precio convertible a número positivo
-
-# Normal:
-# Entrada: nombre=Pan price=12.5
-# Salida: Label: "Product: Pan | Price: $12.5 "
-
-# Border:
-# Entrada: nombre=SuperProductoLargo price=9
-# Salida: Label: "Product: SuperProductoLargo |"
-
-# Error:
-# Entrada: nombre= Pan price=abc
-# Salida: Error: price must be a valid number.
-
-
 """
+Description:
+Generate a **30-character label** in the format:
+`Product: <NAME> | Price: $<PRICE>`
+
+If the result is shorter than 30 characters → **pad with spaces**.
+If longer than 30 → **truncate**.
+
+Inputs:
+
+* product_name (string)
+* price_value (num/string)
+
+Outputs:
+
+* Label: "<30 chars>"
+
+Validations:
+
+* Name not empty
+* Price must be convertible to a positive number
+
+Normal:
+Input: name=Pan price=12.5
+Output: Label: "Product: Pan | Price: $12.5 "
+
+Border:
+Input: name=SuperProductoLargo price=9
+Output: Label: "Product: SuperProductoLargo |"
+
+Error:
+Input: name=Pan price=abc
+Output: Error: price must be a valid number.
+"""
+
+
 product_name = input("Enter product name: ").strip()
 price_value = input("Enter price: ")
 
@@ -373,7 +373,7 @@ else:
             print(f'Label: "{final_label}"')
     except ValueError:
         print("Error: price must be a valid number.")
-"""
+
 
 # CONCLUSIONES
 
