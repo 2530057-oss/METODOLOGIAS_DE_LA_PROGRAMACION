@@ -170,4 +170,4 @@ if _name_ == "_main_":
 # 3) Tutoriales sobre implementación de CRUD básico en memoria con Python (Real Python, GeeksforGeeks)
 
 # REPOSITORIO DE GITHUB
-
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_RamirezValentin_CRUD.py
