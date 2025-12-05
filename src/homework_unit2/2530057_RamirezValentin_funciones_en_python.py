@@ -473,3 +473,4 @@ print("Factorial:", value)
 # 5) Apuntes de clase y recursos oficiales de programación básica sobre definición y uso de funciones
 
 # REPOSITORIO DE GITHUB
+https://github.com/2530057-oss/METODOLOGIAS_DE_LA_PROGRAMACION/blob/main/src/homework_unit2/2530057_RamirezValentin_funciones_en_python.py
